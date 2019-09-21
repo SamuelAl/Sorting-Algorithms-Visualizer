@@ -1,0 +1,53 @@
+body {
+  background-color: white;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.heading {
+  background-color: darkgray;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.algo-menu {
+  justify-content: center;
+  background-color: black;
+}
+
+.menu-item {
+  margin: 10px;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 3px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  column-count: 1;
+  justify-content: center;
+}
+
+.pixel-item {
+  height: 40px;
+  width: 40px;
+}
+
+.selected-pixel {
+  box-shadow: inset 0px 0px 0px 4px black;
+}
