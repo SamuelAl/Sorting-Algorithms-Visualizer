@@ -6,22 +6,6 @@ body {
   display: flex;
 }
 
-.heading {
-  background-color: darkgray;
-  color: black;
-  padding: 10px;
-  text-align: center;
-}
-
-.algo-menu {
-  justify-content: center;
-  background-color: black;
-}
-
-.menu-item {
-  margin: 10px;
-  color: white;
-}
 
 .grid-container {
   display: grid;
@@ -32,7 +16,7 @@ body {
 .grid-item {
   padding: 3px;
   text-align: center;
-  border: 1px solid black;
+
 }
 
 .pixel-grid {
