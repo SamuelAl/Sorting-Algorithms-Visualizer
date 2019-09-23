@@ -17,8 +17,9 @@
     </nav>
     <div class="container">
       <div class="row center-align" style="margin-top:20px">
-        <a href="#" class="btn-floating red" style="margin:0px 10px" onclick="BubbleSort()"><i class="material-icons">play_arrow</i></a>
-        <a href="#" class="btn" style="margin:0px 10px" onclick="ShuffleArray()"><i class="material-icons left">autorenew</i> Generate Array</a>
+        <a id="btnPlay" href="#" class="btn-floating red pulse" style="margin:0px 10px" onclick="BubbleSort()"><i class="material-icons">play_arrow</i></a>
+        <a href="#" class="btn-floating cyan lighten-3" style="margin:0px 10px 0px 0px" onclick="PauseLoop(intervalLoop)"><i class="material-icons">pause</i></a>
+        <a href="#" class="btn" style="margin:0px 10px" onclick="GenerateArray()"><i class="material-icons left">autorenew</i> Generate Array</a>
         <a href="#" class="btn purple">Bubble Sort</a>
       </div>
       <div class="grid-container">

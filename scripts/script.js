@@ -1,6 +1,31 @@
 
+const GenerateArray = () => {
+  mainArray = [];
+  let colors = [0, 45, 60, 154, 176, 200, 300];
+  let lightness = 50;
+  let hue = colors[Math.floor(Math.random() * 7)];
+  for (let i = 0; i < 100; i++) {
+    var pixel = document.createElement('div');
+    pixel.className = "pixel-item";
+    pixel.id = "p" + i;
+
+    if (i % 10 == 0) {
+      lightness+=5;
+    }
+     // var x = Math.floor(Math.random() * 100);
+     // var y = Math.floor(Math.random() * 100);
+     // var z = Math.floor((Math.random() * 50) + 50);
+    var bgColor = "hsl(" + hue + "," + "100%" + "," +  lightness + "%)";
+    pixel.style.background = bgColor;
+    mainArray.push(pixel);
+
+    ShuffleArray(mainArray);
+  }
+}
+
 const ShuffleArray = () => {
   array = mainArray;
+  PauseLoop(intervalLoop);
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * i) ;
 
@@ -23,7 +48,7 @@ const BubbleSort = () => {
   let array = mainArray;
   let swapped = false;
   let i = 1;
-  var forLoop = setInterval(function() {BubbleSortForLoop();}, 1)
+  intervalLoop = setInterval(function() {BubbleSortForLoop();}, 1)
 
   function BubbleSortForLoop() {
     if (i < array.length) {
@@ -50,7 +75,7 @@ const BubbleSort = () => {
         console.log(swapped);
       }
       else {
-        clearInterval(forLoop);
+        clearInterval(intervalLoop);
         console.log("Finished");
       }
     }
@@ -60,26 +85,18 @@ const BubbleSort = () => {
   }
 }
 
-const mainArray = [];
-
-let lightness = 50;
-for (let i = 0; i < 100; i++) {
-  var pixel = document.createElement('div');
-  pixel.className = "pixel-item";
-  pixel.id = "p" + i;
-
-  if (i % 10 == 0) {
-    lightness+=5;
-  }
-   // var x = Math.floor(Math.random() * 100);
-   // var y = Math.floor(Math.random() * 100);
-   // var z = Math.floor((Math.random() * 50) + 50);
-  var bgColor = "hsl(" + 0 + "," + "100%" + "," +  lightness + "%)";
-  pixel.style.background = bgColor;
-  mainArray.push(pixel);
+const PauseLoop = (interval) => {
+  clearInterval(interval);
 }
 
-ShuffleArray(mainArray);
+let mainArray = [];
+var intervalLoop;
+
+GenerateArray();
 UpdateGrid(mainArray);
+
+setTimeout(function() {
+   document.getElementById("btnPlay").className="btn-floating red";
+ }, 5000);
 //BubbleSort(mainArray);
 //console.log("Finished");
