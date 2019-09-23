@@ -7,17 +7,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Sorting Algorithms</title>
   </head>
   <body>
-    <nav class="nav-wraper indigo">
+    <nav class="nav-wrapper indigo">
       <div class="container">
-        <a href="#" class="brand-logo left">Sorting Algorithms Visualizer</a>
+            <a href="#" class="brand-logo left">Sorting Algorithms Visualizer</a>
       </div>
     </nav>
     <div class="container">
+      <div class="row center-align" style="margin-top:20px">
+        <a href="#" class="btn-floating red" style="margin:0px 10px" onclick="BubbleSort()"><i class="material-icons">play_arrow</i></a>
+        <a href="#" class="btn" style="margin:0px 10px" onclick="ShuffleArray()"><i class="material-icons left">autorenew</i> Generate Array</a>
+        <a href="#" class="btn purple">Bubble Sort</a>
+      </div>
       <div class="grid-container">
         <div class="grid-item">
         </div>
@@ -32,5 +35,7 @@
 
 
     <script src="scripts/script.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

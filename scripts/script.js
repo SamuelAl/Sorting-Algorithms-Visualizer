@@ -1,5 +1,6 @@
 
-const ShuffleArray = (array) => {
+const ShuffleArray = () => {
+  array = mainArray;
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * i) ;
 
@@ -7,6 +8,7 @@ const ShuffleArray = (array) => {
     array[i] = array[j];
     array[j] = temp;
   }
+  UpdateGrid(array);
 }
 
 const UpdateGrid = (array) => {
@@ -17,7 +19,8 @@ const UpdateGrid = (array) => {
   })
 }
 
-const BubbleSort = (array) => {
+const BubbleSort = () => {
+  let array = mainArray;
   let swapped = false;
   let i = 1;
   var forLoop = setInterval(function() {BubbleSortForLoop();}, 1)
@@ -78,5 +81,5 @@ for (let i = 0; i < 100; i++) {
 
 ShuffleArray(mainArray);
 UpdateGrid(mainArray);
-BubbleSort(mainArray);
-console.log("Finished");
+//BubbleSort(mainArray);
+//console.log("Finished");
