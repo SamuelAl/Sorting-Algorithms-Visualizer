@@ -1,3 +1,5 @@
+let mainArray = [];
+var intervalLoop;
 
 const GenerateArray = () => {
   mainArray = [];
@@ -87,10 +89,8 @@ const BubbleSort = () => {
 
 const PauseLoop = (interval) => {
   clearInterval(interval);
+  console.log(interval)
 }
-
-let mainArray = [];
-var intervalLoop;
 
 GenerateArray();
 UpdateGrid(mainArray);
